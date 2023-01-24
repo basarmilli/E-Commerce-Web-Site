@@ -8,6 +8,9 @@
 @import url(components/modal-search.css);
 @import url(components/slider.css);
 @import url(components/category-item.css);
+@import url(components/product-item.css);
+@import url(components/campaign-item.css);
+@import url(components/blog-item.css);
 
 /*! pages */
 @import url(pages/home.css);
