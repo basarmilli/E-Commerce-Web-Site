@@ -38,7 +38,7 @@
 .campaigns .campaigns-wrapper {
   display: flex;
   gap: 30px;
-  margin: 30px;
+  margin: 30px 0;
   flex-wrap: wrap;
 }
 
@@ -57,10 +57,81 @@
 
 /*! blog end */
 
+
+
+/*! brand  start */
+.brands {
+  margin: 40px 0;
+}
+
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid #dee0ea;
+  padding: 30px 5px;
+}
+
+.brands-list .brand-item {
+  opacity: 0.4;
+  transition: 0.2s ease opacity;
+}
+
+.brands-list .brand-item:hover {
+  opacity: 1;
+}
+
+/*! brand  end */
+
+/*! policy  start */
+
+.policy {
+  border: 1px solid #dee0ea;
+  margin-top: 40px;
+}
+
+.policy .policy-list {
+  display: flex;
+  padding: 25px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.policy .policy-list .policy-item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.policy .policy-item i {
+  font-size: 50px;
+  display: flex;
+}
+
+.policy .policy-item .policy-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.policy .policy-item .policy-texts strong {
+  font-weight: 600;
+}
+
+.policy .policy-item .policy-texts span {
+  font-size: 12px;
+}
+/*! policy  end */
+
+
 /*! blog responsive start */
 
 @media (max-width: 768px) {
   .blogs .blog-list {
     grid-template-columns: 1fr;
+  }
+
+  .policy .policy-list{
+    flex-direction: column;
+    
   }
 }
