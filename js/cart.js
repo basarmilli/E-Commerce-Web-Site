@@ -15,10 +15,10 @@ function displayCartProduct() {
         </td>
         <td>${item.name}</td>
         <td>$${item.price.newPrice.toFixed(2)}</td>
-        <td class="product-quantity">1</td>
-        <td class="product-subtotal">$${(item.price.newPrice * 1).toFixed(
-          2
-        )}</td>
+        <td class="product-quantity">${item.quantity}</td>
+        <td class="product-subtotal">$${(
+          item.price.newPrice * item.quantity
+        ).toFixed(2)}</td>
       </tr>
         `;
   });
@@ -53,7 +53,7 @@ function saveCardValues() {
   let itemsTotal = 0;
 
   cart.length > 0 &&
-    cart.map((item) => (itemsTotal += item.price.newPrice * 1));
+    cart.map((item) => (itemsTotal += item.price.newPrice * item.quantity));
   console.log(itemsTotal);
   subtotal.innerHTML = `$${itemsTotal.toFixed(2)}`;
   cartTotal.innerHTML = `$${itemsTotal.toFixed(2)}`;

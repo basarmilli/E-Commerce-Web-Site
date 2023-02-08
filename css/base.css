@@ -105,6 +105,11 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 100%;
 }
 
+button:disabled {
+  opacity: 0.4 !important;
+  cursor: no-drop;
+}
+
 /*! Base End */
 
 /*! Responsive Start */
