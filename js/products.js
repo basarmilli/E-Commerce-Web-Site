@@ -9,7 +9,7 @@ let cart = localStorage.getItem("cart")
 
 
 
-function addToCart() {
+function addToCart(products) {
   const cartItems = document.querySelector(".header-cart-count");
   const buttons = [...document.getElementsByClassName("add-to-cart")];
   buttons.forEach((button) => {
@@ -48,7 +48,7 @@ Array.from(productLink).forEach((button)=>{
 }
 
 
-function productsFunc() {
+function productsFunc(products) {
   const productsContainer = document.getElementById("product-list");
 
   let results = " ";
@@ -116,7 +116,7 @@ function productsFunc() {
         </li>
     `;
     productsContainer ? (productsContainer.innerHTML = results) : " ";
-    addToCart();
+    addToCart(products);
   });
   product1();
   productRoute();
